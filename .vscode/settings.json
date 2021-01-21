@@ -1,0 +1,17 @@
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "terminal.integrated.shell.windows": "c:/Program Files/PowerShell/7/pwsh.exe"
+  // "[powershell]": {
+  //   "files.encoding": "utf8bom",
+  //   "files.autoGuessEncoding": true
+  // },
+  // "editor.renderWhitespace": "all",
+  // "editor.renderControlCharacters": true,
+  // "files.trimTrailingWhitespace": true,
+  // "files.encoding": "utf8bom",
+  // "files.autoGuessEncoding": true
+}
