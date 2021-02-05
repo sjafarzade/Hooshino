@@ -17,14 +17,13 @@ const Login = (props): Node => {
         // saveToPhotos: true,
       },
       (res) => {
-        console.log({res});
         setImage(res.uri);
       },
     );
   };
   return (
     <>
-      <ImagePicker uri={image} />
+      <ImagePicker uri={image} onPress={handleImagePicker} />
       <View style={styles.sectionContainer}>
         <Input
           placeholder="Name"
@@ -39,7 +38,7 @@ const Login = (props): Node => {
         <Input placeholder="Phone" errorStyle={{color: 'red'}} />
       </View>
       <View style={styles.sectionContainer}>
-        <Button title="Submit" onPress={handleImagePicker}></Button>
+        <Button title="Submit"></Button>
       </View>
     </>
   );
