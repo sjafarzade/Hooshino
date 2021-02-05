@@ -10,21 +10,28 @@
 
 'use strict';
 import type {Node} from 'react';
-import {Text, ImageBackground, View} from 'react-native';
+import {Text, ImageBackground, View, Pressable} from 'react-native';
 import React from 'react';
 import styles from './styles.js';
 
 const ImagePicker = (props): Node => {
-  const {uri = null} = props;
+  const {uri = null, onPress = null} = props;
   const image = uri ? {uri: uri} : require('../../../assets/img/account.png');
   return (
     <>
       <View style={styles.imageBackgroundParent}>
-        <ImageBackground
-          accessibilityRole={'image'}
-          source={image}
-          style={styles.background}
-          imageStyle={styles.logo}></ImageBackground>
+        <Pressable
+          onPress={() => {
+            onPress && onPress();
+          }}>
+          {({pressed}) => (
+            <ImageBackground
+              accessibilityRole={'image'}
+              source={image}
+              style={styles.background}
+              imageStyle={styles.logo}></ImageBackground>
+          )}
+        </Pressable>
       </View>
     </>
   );
